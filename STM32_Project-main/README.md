@@ -19,7 +19,7 @@ Mic ──► Sampling STM32 ──SPI (1 MHz)──► Processing STM32 ──U
 - **Processing STM32:** receives blocks as an SPI slave using DMA, rejects outliers, applies a length-8 moving average and downsamples 2:1. It then packs each 12-bit sample into 2 bytes and sends it to the PC over UART using DMA.
 - **PC:** a Python (pySerial) script reads the stream and exports it as WAV, CSV or a matplotlib plot. The output format is chosen from the CLI.
 
-## My contributions (Benjamin COhen)
+## My contributions (Benjamin Cohen)
 
 - CubeIDE `.ioc` peripheral configuration (timers, ADC, UART)
 - Working two-MCU UART pipeline, with an ADC callback and a moving-average filter
